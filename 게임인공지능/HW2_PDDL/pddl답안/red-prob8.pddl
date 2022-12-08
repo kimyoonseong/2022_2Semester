@@ -1,0 +1,16 @@
+;; 8. red-prob8
+
+(define (problem red-prob8)
+  (:domain red)
+  (:objects red granny redhouse grannyhouse flower wolf woods huntsman cake)
+  (:init (at red woods) (at wolf woods) (at flower woods) (at granny grannyhouse) (at huntsman grannyhouse)
+         (know-path red) (have red cake)
+         (alive granny) (alive red) (alive wolf)
+         (pickable flower)
+         (isred red)(isgranny granny)
+         (ispredator wolf)
+         )
+  (:goal (and (know-path wolf) (have red flower)(at wolf grannyhouse)(not(alive granny))
+              (at red grannyhouse)(not(alive red)) (eaten wolf red)(isSleep wolf)(snoreloud wolf)(ischeck huntsman)
+              (isSaved  red)(isSaved  granny)(isDelivered red granny cake)(feelhappy red granny huntsman)
+              )))
